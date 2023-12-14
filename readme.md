@@ -5,6 +5,17 @@ a while to set this up so my goal is to compile every problem I've come across
 to help others save time. An example `add` package is included so you can verify
 the setup.
 
+## Table of content
+
+1. [My system](#my-system)
+2. [Project structure](#project-structure)
+   - [`add` package](#add-package)
+3. [Build prerequisites](#build-prerequisites)
+   - [Installing multiple CUDA versions](#installing-multiple-cuda-versions)
+   - [Installing GCC](#installing-gcc)
+4. [Environment](#environment)
+5. [Build](#build)
+
 ## My system
 
 - OS: Fedora 39
@@ -21,6 +32,12 @@ the setup.
 
 All child folders in `cpu/` and `gpu/` are the project's virtual workspace
 members (see [`Cargo.toml`](Cargo.toml)). You may want to add a root package.
+
+### `add` package
+
+The `add` package is included as a simple Rust CUDA hello world. It adds two
+arrays of 2 to the power of 20 (about 1 million) items each, with one array
+holding all 1's and the other all 2's. The result should be an array of all 3's.
 
 ## Build prerequisites
 
